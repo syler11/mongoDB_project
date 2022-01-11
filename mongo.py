@@ -22,6 +22,8 @@ conn = mongo_connect(MONGO_URI)
 
 coll = conn[DATABASE][COLLECTION]
 
+coll.delete_one({"first": "douglas"})
+
 documents = coll.find()
 
 for doc in documents:
